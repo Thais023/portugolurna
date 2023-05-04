@@ -146,9 +146,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1682; 
+ * @POSICAO-CURSOR = 9; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {candidato1, 7, 9, 10}-{candidato2, 8, 9, 10}-{candidato3, 9, 9, 10}-{voto, 10, 10, 4}-{contagemC1, 11, 10, 10}-{contagemC2, 12, 10, 10}-{contagemC3, 13, 10, 10}-{contagem_branco, 14, 10, 15}-{contagem_nulo, 15, 10, 13}-{soma, 66, 7, 4}-{porcentagemC1, 67, 7, 13}-{porcentagemC2, 68, 7, 13}-{porcentagemC3, 69, 7, 13}-{porcentagem_branco, 70, 7, 18}-{porcentagem_nulo, 71, 7, 16};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
