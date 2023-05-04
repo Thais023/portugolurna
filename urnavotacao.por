@@ -52,6 +52,8 @@ programa
 				caso contrario:
 				escreva("	\n*VOTO INVÁLIDO*, vote novamente ") /* Mensagem de erro */
 				pare
+
+				
 			}
 			escreva(" \nVote no seu candidato: ") /* Mensagem de instrução */
 			leia(voto) /* Ler o voto do usuário */
@@ -138,3 +140,15 @@ programa
 		
 	}
 }
+
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 1682; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
