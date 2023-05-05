@@ -15,7 +15,9 @@ programa
 		inteiro contagem_nulo = 0
 		
 		/* Mensagem de introdução e mensagem de instrução */
-		escreva("\n\t\t\t\t\t\t\t\t\t\t * ELEIÇOES 2023 *\n\n\nDigite o número do seu candidato: ")
+		escreva("\n\t\t\t\t\t\t\t\t\t\t * ELEIÇOES 2023 ")
+		escreva("\nCANDIDATO THAIS NUMERO : 1\nCANDIDATO MAYARANUMERO : 2\nCANDIDTATO DAYANA NUMERO : 3\nNULO : 8\nBRANCO : 5\nEcerrar as eleições numero: 0\n")
+		escreva("\nDigite o número do seu candidato: ")
 		
 		leia(voto) /* ler o voto do usuário e armazenar na memória */
 
@@ -62,78 +64,43 @@ programa
 		}
 		escreva("#A ELEIÇÃO FOI ENCERRADA#. Iniciando contagem de votos...\n\n\n")
 
-		/* Declarando e definindo as variáveis e somando o voto de todos os candidatos */
+		/* Declarando e definindo as variáveis e somando o voto de todos os candidatos. Calculando porcentagem dos votos de cada candidato */
 		real soma = contagemC1 + contagemC2 + contagemC3 + contagem_branco + contagem_nulo
-		real porcentagemC1
-		real porcentagemC2
-		real porcentagemC3
-		real porcentagem_branco
-		real porcentagem_nulo
+		real porcentagemC1 = (contagemC1/soma) * 100
+		real porcentagemC2 = (contagemC2/soma) * 100
+		real porcentagemC3= (contagemC3/soma) * 100
+		real porcentagem_branco = (contagem_branco/soma) * 100
+		real porcentagem_nulo = (contagem_nulo/soma) * 100
 
-		/* Calculando porcentagem dos votos de cada candidato */
-		porcentagemC1 = (contagemC1/soma) * 100
-		porcentagemC2 = (contagemC2/soma) * 100
-		porcentagemC3 = (contagemC3/soma) * 100
-		porcentagem_branco = (contagem_branco/soma) * 100
-		porcentagem_nulo = (contagem_nulo/soma) * 100
+		escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
+		escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
+		escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
+		escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
+		escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
 		
 		/* Comparando a quantidade de votos dos candidatos para determinar o resultado final e exibí-lo ao usuário */
 		se(contagemC1 > contagemC2 e contagemC1 > contagemC3){
-			escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
 			escreva("Candidata THAIS venceu a eleição com " , contagemC1 + contagem_branco, " votos, que representam ", mat.arredondar(porcentagemC1 + porcentagem_branco , 2), "% do total de votos.\n")
 		}
-		senao se(contagemC2 > contagemC3 e contagemC2 > contagemC1){
-			escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
+		senao se(contagemC2 > contagemC3 e contagemC2 > contagemC1){	
 			escreva("Candidata MAYARA venceu a eleição com " , contagemC2 + contagem_branco, " votos, que representam ", mat.arredondar( porcentagemC2 + porcentagem_branco ,2 ), "% do total de votos.\n") 
 			
 		}
 		senao se(contagemC3 > contagemC1 e contagemC3 > contagemC2){
-			escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
 			escreva("Candidata DAYANA venceu a eleição com ", contagemC3 + contagem_branco, " votos, que representam ", mat.arredondar( porcentagemC3 + porcentagem_branco , 2 ), "% do total de votos.\n")
 		}
-		senao se(contagemC1 == contagemC2 e contagemC2 == contagemC3){
-			escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
+		senao se(contagemC1 == contagemC2 e contagemC2 == contagemC3){	
 			escreva("Empate entre TODOS os candidatos -------2º Turno\n\n")
 		}
 		senao se(contagemC2 == contagemC3 e contagemC1 < contagemC2){
-			escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
 			escreva("\nEMPATE entre as candidatas MAYARA e DAYANA-------> 2ºTurno\n\n")
 			
 		}
 		senao se(contagemC1 == contagemC3 e contagemC2 < contagemC3){
-			escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
 			escreva("EMPATE entre as candidatas THAIS e DAYANA ---------> 2ºTurno")
 		}
 		senao se(contagemC1 == contagemC2 e contagemC3 < contagemC2){
-			escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-			escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
-			escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
+			
 			escreva("EMAPTE entre as candidatas THAIS e MAYARA ---------> 2ºTurno\n\n")
 		}
 
@@ -146,9 +113,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 9; 
+ * @POSICAO-CURSOR = 614; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {candidato1, 7, 9, 10}-{candidato2, 8, 9, 10}-{candidato3, 9, 9, 10}-{voto, 10, 10, 4}-{contagemC1, 11, 10, 10}-{contagemC2, 12, 10, 10}-{contagemC3, 13, 10, 10}-{contagem_branco, 14, 10, 15}-{contagem_nulo, 15, 10, 13}-{soma, 66, 7, 4}-{porcentagemC1, 67, 7, 13}-{porcentagemC2, 68, 7, 13}-{porcentagemC3, 69, 7, 13}-{porcentagem_branco, 70, 7, 18}-{porcentagem_nulo, 71, 7, 16};
+ * @SIMBOLOS-INSPECIONADOS = {candidato1, 7, 9, 10}-{candidato2, 8, 9, 10}-{candidato3, 9, 9, 10}-{voto, 10, 10, 4}-{contagemC1, 11, 10, 10}-{contagemC2, 12, 10, 10}-{contagemC3, 13, 10, 10}-{contagem_branco, 14, 10, 15}-{contagem_nulo, 15, 10, 13};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
