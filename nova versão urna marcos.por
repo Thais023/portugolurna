@@ -1,7 +1,32 @@
 programa
 {
 	inclua biblioteca Matematica --> mat /* Inclusão da biblioteca matematica para usar a função de arrendondar que não tem disponivel por padrão. */
-	
+
+	/* Criando uma função que retorna o vencedor da eleião por meio de um código */
+	funcao inteiro maior_numero(inteiro candidato1, inteiro candidato2, inteiro candidato3){
+		se(candidato1 > candidato2 e candidato1> candidato3){
+			retorne candidato1
+		}
+		senao se(candidato2 > candidato1 e candidato2 > candidato3 ){
+			retorne candidato2
+		}
+		senao se(candidato3 > candidato2 e candidato3 > candidato1){
+			retorne candidato3
+		}
+		senao se(candidato1 == candidato2 e candidato1 == candidato3){
+			retorne -123
+		}
+		senao se(candidato1 == candidato2 e candidato1 > candidato3){
+			retorne -12
+		}
+		senao se(candidato1 == candidato3 e candidato1 > candidato2){
+			retorne -13
+		}
+		senao {
+			retorne -23
+		}
+	}
+		
 	funcao inicio()
 	{
 		/* Declarando e definindo as variáveis */
@@ -114,9 +139,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 159; 
+ * @POSICAO-CURSOR = 237; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {candidato1, 8, 9, 10}-{candidato2, 9, 9, 10}-{candidato3, 10, 9, 10}-{voto, 11, 10, 4}-{contagemC1, 12, 10, 10}-{contagemC2, 13, 10, 10}-{contagemC3, 14, 10, 10}-{contagem_branco, 15, 10, 15}-{contagem_nulo, 16, 10, 13};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
