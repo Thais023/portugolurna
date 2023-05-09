@@ -19,11 +19,11 @@ programa
 		
 		escreva("Configuração da urna eletrônica \n\n")
 		
-		escreva (">>Digite o numero de candidato 1\n ")
+		escreva (">>Digite o nome do candidato 1\n ")
 		leia(candidato1)
-		escreva(">>Digite o numero do candidato 2 \n")
+		escreva(">>Digite o nome do candidato 2 \n")
 		leia(candidato2)
-		escreva(">>Digite o numero do candidato 3 \n")
+		escreva(">>Digite o nome do candidato 3 \n")
 		leia(candidato3)
 		/* Mensagem de introdução e mensagem de instrução */
 		escreva("\n\t\t\t\t\t\t\t\t\t\t * ELEIÇOES 2023 *")
@@ -38,7 +38,7 @@ programa
 			escolha(voto){
 
 				caso 123456:
-				escreva("Deseja relamente encerrrar a votação?\n ")
+				escreva("Deseja relamente encerrar a votação?\n ")
 				escreva("Digite  S para 'sim': ")
 				leia(confirmaEncerramento)
 
@@ -78,10 +78,12 @@ programa
 
 				
 			}
-			escreva(" \nVote no seu candidato: ") /* Mensagem de instrução */
-			leia(voto) /* Ler o voto do usuário */
-
-	
+			
+			se(confirmaEncerramento == 'N' ou confirmaEncerramento == 'n' ){
+				escreva(" \nVote no seu candidato: ") /* Mensagem de instrução */
+				leia(voto) /* Ler o voto do usuário */
+			}
+			
 		}
 	
 		escreva("\t\t\t#A ELEIÇÃO FOI ENCERRADA#.\n\n\n")
@@ -137,7 +139,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 630; 
+ * @POSICAO-CURSOR = 2632; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
