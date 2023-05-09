@@ -14,18 +14,38 @@ programa
 		inteiro contagemC3 = 0
 		inteiro contagem_branco = 0
 		inteiro contagem_nulo = 0
+		logico encerraVotacao = falso
+		caracter confirmaEncerramento = 'N'
 		
+		escreva("Configuração da urna eletrônica \n\n")
+		
+		escreva (">>Digite o numero de candidato 1\n ")
+		leia(candidato1)
+		escreva(">>Digite o numero do candidato 2 \n")
+		leia(candidato2)
+		escreva(">>Digite o numero do candidato 3 \n")
+		leia(candidato3)
 		/* Mensagem de introdução e mensagem de instrução */
-		escreva("\n\t\t\t\t\t\t\t\t\t\t * ELEIÇOES 2023 ")
+		escreva("\n\t\t\t\t\t\t\t\t\t\t * ELEIÇOES 2023 *")
 		escreva("\nCANDIDATO ", candidato1  ," NUMERO : 1\nCANDIDATO ",candidato2," NUMERO : 2\nCANDIDTATO ",candidato3," NUMERO : 3\nNULO : 8\nBRANCO : 5\nEcerrar as eleições numero: 0\n")
 		escreva("\nDigite o número do seu candidato: ")
 		
 		leia(voto) /* ler o voto do usuário e armazenar na memória */
-
+		
 		/* Executar os passos seguintes até que alguém vote 0 para encerrar a eleição */
-		enquanto(voto != 0){
+		enquanto(nao encerraVotacao){
 			/* Associar o voto do usuário a cada candidato e incrementar a contagem de votos do candidato votado */
 			escolha(voto){
+
+				caso 123456:
+				escreva("Deseja relamente encerrrar a votação?\n ")
+				escreva("Digite  S para 'sim': ")
+				leia(confirmaEncerramento)
+
+				se(confirmaEncerramento == 's' ou confirmaEncerramento == 'S'){
+					encerraVotacao = verdadeiro
+				}	
+				pare
 				
 				caso 1:
 				contagemC1++
@@ -63,8 +83,11 @@ programa
 
 	
 		}
-		escreva("#A ELEIÇÃO FOI ENCERRADA#. Iniciando contagem de votos...\n\n\n")
-
+	
+		escreva("\t\t\t#A ELEIÇÃO FOI ENCERRADA#.\n\n\n")
+		
+		
+	
 		/* Declarando e definindo as variáveis e somando o voto de todos os candidatos. Calculando porcentagem dos votos de cada candidato */
 		real soma = contagemC1 + contagemC2 + contagemC3 + contagem_branco + contagem_nulo
 		real porcentagemC1 = (contagemC1/soma) * 100
@@ -102,7 +125,7 @@ programa
 		}
 		senao se(contagemC1 == contagemC2 e contagemC3 < contagemC2){
 			
-			escreva("EMAPTE entre as candidatas THAIS e MAYARA ---------> 2ºTurno\n\n")
+			escreva("EMPATE entre as candidatas THAIS e MAYARA ---------> 2ºTurno\n\n")
 		}
 
 		
@@ -114,9 +137,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 159; 
+ * @POSICAO-CURSOR = 630; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {candidato1, 8, 9, 10}-{candidato2, 9, 9, 10}-{candidato3, 10, 9, 10}-{voto, 11, 10, 4}-{contagemC1, 12, 10, 10}-{contagemC2, 13, 10, 10}-{contagemC3, 14, 10, 10}-{contagem_branco, 15, 10, 15}-{contagem_nulo, 16, 10, 13};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
