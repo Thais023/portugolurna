@@ -33,7 +33,7 @@ programa
 		leia(candidato3)
 		/* Mensagem de introdução e mensagem de instrução */
 		escreva("\n\t\t\t\t\t\t\t\t\t\t * ELEIÇOES 2023 *")
-		escreva("\nCANDIDATO ", candidato1  ," NUMERO : 1\nCANDIDATO ",candidato2," NUMERO : 2\nCANDIDTATO ",candidato3," NUMERO : 3\nNULO : 8\nBRANCO : 5\nEcerrar as eleições numero: 0\n")
+		escreva("\nCANDIDATO ", candidato1  ," NUMERO : 1\nCANDIDATO ",candidato2," NUMERO : 2\nCANDIDTATO ",candidato3," NUMERO : 3\nNULO : 8\nBRANCO : 5\n")
 		escreva("\nDigite o número do seu candidato: ")
 		
 		leia(voto) /* ler o voto do usuário e armazenar na memória */
@@ -109,22 +109,22 @@ programa
 		real porcentagem_branco = (contagem_branco/soma) * 100
 		real porcentagem_nulo = (contagem_nulo/soma) * 100
 
-		escreva("A candidata ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
-		escreva("A candidata ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
-		escreva("A candidata ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
-		escreva("Houve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
+		escreva("O candidato(a) ", candidato1," recebeu ", contagemC1 , " votos, que representam ", mat.arredondar(porcentagemC1 , 2), "% do total de votos.\n")
+		escreva("O candidato(a) ", candidato2," recebeu ", contagemC2 , " votos, que representam ", mat.arredondar(porcentagemC2 , 2), "% do total de votos.\n")
+		escreva("O candidato(a) ", candidato3," recebeu ", contagemC3 , " votos, que representam ", mat.arredondar(porcentagemC3 , 2), "% do total de votos.\n")
+		escreva("\nHouve um total de ", contagem_nulo , " votos NULOS, que representam ", mat.arredondar(porcentagem_nulo , 2), "% do total de votos.\n")
 		escreva("Houve um total de ", contagem_branco , " votos BRANCOS, que representam ", mat.arredondar(porcentagem_branco , 2), "% do total de votos.\n\n")
 		
 		/* Comparando a quantidade de votos dos candidatos para determinar o resultado final e exibí-lo ao usuário */
 		se(contagemC1 > contagemC2 e contagemC1 > contagemC3){
-			escreva("Candidata THAIS venceu a eleição com " , contagemC1 + contagem_branco, " votos, que representam ", mat.arredondar(porcentagemC1 + porcentagem_branco , 2), "% do total de votos.\n")
+			escreva(" >>>Candidato " ,candidato1 ," VENCEU A ELEIÇÃO<<<< " , contagemC1 + contagem_branco, " votos, que representam ", mat.arredondar(porcentagemC1 + porcentagem_branco , 2), "% do total de votos.\n")
 		}
 		senao se(contagemC2 > contagemC3 e contagemC2 > contagemC1){	
-			escreva("Candidata MAYARA venceu a eleição com " , contagemC2 + contagem_branco, " votos, que representam ", mat.arredondar( porcentagemC2 + porcentagem_branco ,2 ), "% do total de votos.\n") 
+			escreva(" >>>Candidato " ,candidato2, " VENCEU A ELEIÇÃO <<<< " , contagemC2 + contagem_branco, " votos, que representam ", mat.arredondar( porcentagemC2 + porcentagem_branco ,2 ), "% do total de votos.\n") 
 			
 		}
 		senao se(contagemC3 > contagemC1 e contagemC3 > contagemC2){
-			escreva("Candidata DAYANA venceu a eleição com ", contagemC3 + contagem_branco, " votos, que representam ", mat.arredondar( porcentagemC3 + porcentagem_branco , 2 ), "% do total de votos.\n")
+			escreva(">>>Candidato " ,candidato3, " VENCEU A ELEIÇÃO <<<<1", contagemC3 + contagem_branco, " votos, que representam ", mat.arredondar( porcentagemC3 + porcentagem_branco , 2 ), "% do total de votos.\n")
 		}
 		senao se(contagemC1 == contagemC2 e contagemC2 == contagemC3){	
 			escreva("Empate entre TODOS os candidatos -------2º Turno\n\n")
@@ -148,7 +148,7 @@ programa
 		inteiro somDeConfirmacao = som.carregar_som("confirma-urna.mp3")
 
 		som.reproduzir_som(somDeConfirmacao, falso)
-		escreva("A função foi executada")
+		
 	
 
 		
@@ -165,7 +165,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 603; 
+ * @POSICAO-CURSOR = 5059; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
