@@ -1,6 +1,8 @@
 programa
 {
 	inclua biblioteca Matematica --> mat /* Inclusão da biblioteca matematica para usar a função de arrendondar que não tem disponivel por padrão. */
+	inclua biblioteca Sons --> som
+	inclua biblioteca Util
 	
 	funcao inicio()
 	{
@@ -16,6 +18,10 @@ programa
 		inteiro contagem_nulo = 0
 		logico encerraVotacao = falso
 		caracter confirmaEncerramento = 'N'
+				
+		
+		
+			
 		
 		escreva("Configuração da urna eletrônica \n\n")
 		
@@ -50,26 +56,31 @@ programa
 				caso 1:
 				contagemC1++
 				escreva("Você votou no candidato " , candidato1 , "\n") /* Mensagem de confirmação do voto */
+				somConfirmacao()
 				pare
 				
 				caso 2:
 				contagemC2++
 				escreva("Você votou no candidato " , candidato2 , "\n") /* Mensagem de confirmação do voto */
+				somConfirmacao()
 				pare
 				
 				caso 3:
 				contagemC3++
 				escreva("Você votou no candidato " , candidato3 , "\n") /* Mensagem de confirmação do voto */
+				somConfirmacao()
 				pare
 		
 				caso 5:
 				contagem_branco++
 				escreva("Você votou BRANCO \n" ) /* Mensagem de confirmação do voto */
+				somConfirmacao()
 				pare
 		
 				caso 8:
 				contagem_nulo++
 				escreva("Você votou NULO \n") /* Mensagem de confirmação do voto */
+				somConfirmacao()
 				pare
 
 				caso contrario:
@@ -129,17 +140,32 @@ programa
 			
 			escreva("EMPATE entre as candidatas THAIS e MAYARA ---------> 2ºTurno\n\n")
 		}
+	}
+		
+	funcao vazio somConfirmacao(){
+
+		inteiro tempoDeEspera = 2000
+		inteiro somDeConfirmacao = som.carregar_som("confirma-urna.mp3")
+
+		som.reproduzir_som(somDeConfirmacao, falso)
+		escreva("A função foi executada")
+	
 
 		
+	
+		}
+	
+	
 	}
-}
+	
+	
 
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2632; 
+ * @POSICAO-CURSOR = 603; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
