@@ -7,9 +7,9 @@ programa
 	funcao inicio()
 	{
 		/* Declarando e definindo as variáveis */
-		cadeia candidato1 = "THAIS"
-		cadeia candidato2 = "MAYARA"
-		cadeia candidato3 = "DAYANA"
+		cadeia candidato1 = ""
+		cadeia candidato2 = ""
+		cadeia candidato3 = ""
 		inteiro voto
 		inteiro contagemC1 = 0
 		inteiro contagemC2 = 0
@@ -18,22 +18,26 @@ programa
 		inteiro contagem_nulo = 0
 		logico encerraVotacao = falso
 		caracter confirmaEncerramento = 'N'
+		caracter escolher = 'S'
 				
 		
 		
-			
+		enquanto(escolher != 'N' e escolher != 'n'){
+			escreva("\t\t\t\t\t\t\tConfiguração da urna eletrônica \n\n")	
+			escreva (">>Digite o nome do candidato 1\n ")
+			leia(candidato1)
+			escreva(">>Digite o nome do candidato 2 \n")
+			leia(candidato2)
+			escreva(">>Digite o nome do candidato 3 \n")
+			leia(candidato3)
+			/* Mensagem de introdução e mensagem de instrução */
+			limpa()
+			escreva("Você deseja alterar o nome do candidato? S/N  ")
+			leia(escolher)
+		}
 		
-		escreva("Configuração da urna eletrônica \n\n")
-		
-		escreva (">>Digite o nome do candidato 1\n ")
-		leia(candidato1)
-		escreva(">>Digite o nome do candidato 2 \n")
-		leia(candidato2)
-		escreva(">>Digite o nome do candidato 3 \n")
-		leia(candidato3)
-		/* Mensagem de introdução e mensagem de instrução */
-		escreva("\n\t\t\t\t\t\t\t\t\t\t * ELEIÇOES 2023 *")
-		escreva("\nCANDIDATO ", candidato1  ," NUMERO : 1\nCANDIDATO ",candidato2," NUMERO : 2\nCANDIDTATO ",candidato3," NUMERO : 3\nNULO : 8\nBRANCO : 5\n")
+		escreva("\n\t\t\t\t\t\t\t\t * ELEIÇOES 2023 *")
+		escreva("\n", candidato1  ," Nº : 1\n",candidato2," Nº : 2\n",candidato3," Nº : 3\nNULO Nº : 8\nBRANCO Nº : 5\n")
 		escreva("\nDigite o número do seu candidato: ")
 		
 		leia(voto) /* ler o voto do usuário e armazenar na memória */
@@ -43,7 +47,7 @@ programa
 			/* Associar o voto do usuário a cada candidato e incrementar a contagem de votos do candidato votado */
 			escolha(voto){
 
-				caso 123456:
+				caso 841315:
 				escreva("Deseja relamente encerrar a votação?\n ")
 				escreva("Digite  S para 'sim': ")
 				leia(confirmaEncerramento)
@@ -130,15 +134,15 @@ programa
 			escreva("Empate entre TODOS os candidatos -------2º Turno\n\n")
 		}
 		senao se(contagemC2 == contagemC3 e contagemC1 < contagemC2){
-			escreva("\nEMPATE entre as candidatas MAYARA e DAYANA-------> 2ºTurno\n\n")
+			escreva("\nEMPATE entre os candidatos", candidato2, "e", candidato3, " ------> 2ºTurno\n\n")
 			
 		}
 		senao se(contagemC1 == contagemC3 e contagemC2 < contagemC3){
-			escreva("EMPATE entre as candidatas THAIS e DAYANA ---------> 2ºTurno")
+			escreva("EMPATE entre os candidatos",candidato1, "e", candidato3, " ---------> 2ºTurno")
 		}
 		senao se(contagemC1 == contagemC2 e contagemC3 < contagemC2){
 			
-			escreva("EMPATE entre as candidatas THAIS e MAYARA ---------> 2ºTurno\n\n")
+			escreva("EMPATE entre as candidadto", candidato1, "e", candidato2, "---------> 2ºTurno\n\n")
 		}
 	}
 		
@@ -165,7 +169,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5059; 
+ * @POSICAO-CURSOR = 1749; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
