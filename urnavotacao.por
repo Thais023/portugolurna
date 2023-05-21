@@ -34,6 +34,7 @@ programa
 			limpa()
 			escreva("Você deseja alterar o nome do candidato? S/N  ")
 			leia(escolher)
+			limpa()
 		}
 		
 		escreva("\n\t\t\t\t\t\t\t\t * ELEIÇOES 2023 *")
@@ -169,7 +170,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1749; 
+ * @POSICAO-CURSOR = 1084; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
