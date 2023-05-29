@@ -49,7 +49,7 @@ programa
 			escolha(voto){
 
 				caso 841315:
-				escreva("Deseja relamente encerrar a votação?\n ")
+				escreva("Deseja realmente encerrar a votação?\n ")
 				escreva("Digite  S para 'sim': ")
 				leia(confirmaEncerramento)
 
